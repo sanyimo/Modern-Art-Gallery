@@ -1,0 +1,128 @@
+.location {
+    position: relative;
+
+    .button {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: -1px;
+        left: 0;
+    }
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+    
+    .our-location {
+        background-color: $black;
+        color: $white;
+        width: 100%;
+        padding: 3rem 1rem;
+        @include breakpoint(tablet) {
+            display: flex;
+            justify-content: space-between;
+            padding: 5.5rem 2.5rem 5rem 2.5rem;
+            margin: 0;
+        }
+        @include breakpoint(desktop) {
+            padding: 6.5rem 10.31rem 8rem 10.31rem;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            
+
+        }
+        h2 {
+            margin: 0 0 3rem;
+            font-size: 3.125rem;
+            font-weight: 900;
+            line-height: 2.81rem;
+            text-transform: uppercase;
+            font-family: $title-font;
+            @include breakpoint(tablet) {
+                margin: 0 0 4rem;
+                font-size: 3.44rem;
+                font-weight: 900;
+                line-height: 3.125rem;
+                text-transform: uppercase;
+                font-family: $title-font;
+                padding-right: 5rem;
+                width: 32%;
+            }
+            @include breakpoint(desktop) {
+                margin: 0 0 4rem;
+                font-size: 4.375rem;
+                font-weight: 900;
+                line-height: 4.375rem;
+                text-transform: uppercase;
+                font-family: $title-font;
+                padding-right: 8rem;
+                width: 35%;
+            }
+        }
+        &__info {
+            font-style: normal;
+            @include breakpoint(tablet) {
+                display: flex;
+                flex-direction: column;
+                width: 62%;
+            }
+            @include breakpoint(desktop) {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+            }
+            h3 {
+                font-family: $title-font;
+                font-size: 2rem;
+                line-height: 2rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: $bronze;
+                margin-bottom: 1.25rem;
+
+                @include breakpoint(tablet) {
+                    font-size: 2.25rem;
+                    line-height: 2.25rem;
+                    font-style: normal;
+                }
+                @include breakpoint(desktop) {
+                    font-size: 2.25rem;
+                    line-height: 2.25rem;
+                    font-style: normal;
+                }
+            }
+
+            address {
+                margin: 0;
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+                font-style: normal;
+                @include breakpoint(tablet) {
+                    margin-bottom: 2rem;
+                }
+                @include breakpoint(desktop) {
+                    font-size: 1.375rem;
+                    line-height: 2rem;
+                    margin-bottom: 2rem;
+                }
+            }
+            p {
+                margin: 1.25rem 0 0.5rem;
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+                
+                @include breakpoint(tablet) {
+                    margin: 0;
+                    width: 75%;
+                }
+
+                @include breakpoint(desktop) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

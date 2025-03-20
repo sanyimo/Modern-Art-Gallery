@@ -1,0 +1,57 @@
+.button {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 2rem auto 17.5rem 1rem;
+    letter-spacing: 3.64px;
+    @include breakpoint(tablet) {
+        position: absolute;
+        margin: 0;
+        top: 21.8rem;
+        right: 10.5rem;
+    }
+    @include breakpoint(desktop) {
+        position: absolute;
+        top: 24rem;
+        right: 25.3rem;
+    }
+
+    a {
+        background-color: $black;
+        color: $white;
+        padding: 1.5rem 35px;
+        font-family: $title-font;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 800;
+        line-height: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        background-color: $bronze;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        transition: background-color 0.3s ease;
+    }
+
+    img {
+        width: 0.5rem;
+        height: 1.5rem;
+    }
+
+    &:hover,
+    &:active {
+        a {
+            background-color: $bronze;
+        }
+
+        .button__icon {
+            background-color: $black;
+        }
+    }
+}

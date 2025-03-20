@@ -1,0 +1,100 @@
+.footer {
+    background-color: $black;
+    color: $white;
+}
+
+.footerlocation {
+    background-color: $bronze;
+    color: $black;
+}
+
+.footer, .footerlocation {
+    padding: 3rem 2rem ;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    @include breakpoint(tablet) {
+        flex-direction: row;
+        padding: 3.8rem 2.5rem;
+    }
+    @include breakpoint(desktop) {
+        padding: 5rem 10.25rem;
+    }
+
+    &__logo, 
+    &__logo-bronze {
+        width: 110px;
+        height: auto;
+        margin-bottom: 38px;
+        @include breakpoint(tablet) {
+            justify-content: flex-start;
+            margin-bottom: 0;
+        }
+        
+        @include breakpoint(desktop) {
+            width: 10rem;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+    &__info {
+        font-size: 1rem;
+        line-height: 26px;
+        font-weight: 400;
+        font-style: normal;
+
+        @include breakpoint(tablet) {
+            justify-items: center;
+            width: 65%;
+        }
+
+        @include breakpoint(desktop) {
+            font-size: 18px;
+            width: 50%;
+            line-height: 1.75rem;
+        }
+
+        address {
+            margin-bottom: 38px;
+            font-size: 1rem;
+            line-height: 26px 5rem;
+            font-weight: 400;
+            font-style: normal;
+
+            @include breakpoint(tablet) {
+                justify-content: center;
+                align-items: center;
+                width: 60%;
+            }
+
+            @include breakpoint(desktop) {
+                font-size: 18px;
+                line-height: 1.75rem;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        width: auto;
+        gap: 1.25rem;
+        @include breakpoint(tablet) {
+            justify-content: flex-end;
+            align-items: stretch;
+        }
+        @include breakpoint(desktop) {
+            gap: 2rem;
+        }
+            
+        a:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+}

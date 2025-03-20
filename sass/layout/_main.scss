@@ -1,0 +1,289 @@
+main {
+    .hero {
+        position: relative;
+        @include breakpoint(tablet) {
+            display: flex;
+        }
+        @include breakpoint(desktop) {
+            margin-bottom: 1rem;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 800px;
+        }
+        &__black-bg {
+            display: none;
+            @include breakpoint(desktop) {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 30%;
+                height: 100%;
+                background-color: $black;
+            }
+        }
+        &__image {
+            width: 100%;
+            @include breakpoint(tablet) {
+                width: 57%;
+                height: 100%;
+                margin-bottom: 100px;
+            }        
+            @include breakpoint(desktop) {
+                width: 40%;
+                height: 100%;
+                margin: 0;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                @include breakpoint(tablet) {   
+                    object-fit: contain; 
+                }
+                @include breakpoint(desktop) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; 
+                    
+                }
+            }
+        }
+        
+        &__content {
+            @include breakpoint(tablet) {
+                display: block;
+                position: absolute;
+                top: 6rem;
+                right: -3.6rem;
+                width: 60%;
+            }
+            @include breakpoint(desktop) {
+                top: 2.3rem;
+                right: -15.7rem;
+                width: 58%;
+            }
+            .logo-container {
+                margin: 2rem 1rem;
+                top: 5%;
+                left: 50%;
+                transform: translate(1%, 5%);
+
+                @include breakpoint(tablet) {
+                    margin-bottom: 1.875rem;
+                }
+
+                @include breakpoint(desktop) {
+                    margin: 0;
+                    
+                    transform: translate(-88%, 150%);
+                }
+
+                img {
+                    width: 320px;
+
+                    @include breakpoint(tablet) {
+                        width: 339px;
+                    }
+
+                    @include breakpoint(desktop) {
+                        max-width: 500px;
+                    }
+                }
+            }
+            &-text {
+                margin: 2rem 2.8rem 2rem 1rem;
+                font-size: 18px;
+                line-height: 1.75rem;
+
+                @include breakpoint(tablet) {
+                    display: inline-block;
+                    margin: 0 0 0 5px;
+                    max-width: 85%;
+                    padding: 1rem;
+                }
+
+                @include breakpoint(desktop) {
+                    margin: 0 0 0 5px;
+                    max-width: 55%;
+                    padding: 1rem;
+                    font-size: 22px;
+                    font-weight: 400;
+                    line-height: 2rem;
+                }
+            }
+        }
+    }
+
+
+    .gallery {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 11px;
+            margin: 1.5rem 1.5rem 7.5rem;
+            max-width: 100%;
+            height: auto;
+        }
+        @include breakpoint(desktop) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 11.25rem;
+            margin-bottom: 11.25rem;
+        }
+
+        .day {
+            margin-top: 2rem;
+            order: 0;
+            @include breakpoint(tablet) {
+                width: 38%;
+                order: 0;
+                padding-right: 1.25rem;
+            }
+            @include breakpoint(desktop) {
+                width: 38%;
+                order: 0;
+                padding-right: 0;
+            }
+            h2 {
+                margin-bottom: 25px;
+                font-size: 50px;
+                font-weight: 900;
+                line-height: 45px;
+                text-transform: uppercase;
+                font-family: $title-font;
+                
+                @include breakpoint(desktop) {
+                    margin-bottom: 2rem;
+                    font-size: 3.75rem;
+                    font-weight: 900;
+                    line-height: 3.75rem;
+                    width: 85%;
+                }
+            }
+
+            &__text {
+                margin: 0.5rem 2rem 2rem 0;
+                font-size: 18px;
+                line-height: 1.75rem;
+                
+                @include breakpoint(desktop) {
+                    margin-right: 1rem;
+                    font-size: 22px;
+                    line-height: 2rem;
+                    width: 95%;
+                }
+            }
+        }
+
+        &__image1,
+        &__image2,
+        &__image3 {
+            width: 100%;
+            margin-bottom: 11px;
+            justify-content: center;
+            @include breakpoint(tablet) {
+                margin-bottom: 0;
+                height: auto;
+                display: flex;
+                justify-content: center;
+            }
+            
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+        &__image1 {
+            order: -1;
+            @include breakpoint(tablet) {
+                max-width: 60%;
+                order: 1;
+            }
+            @include breakpoint(desktop) {
+                width: 58%;
+            }
+        }
+
+        &__image2 {
+            @include breakpoint(tablet) {
+                order: 2;   
+                width: 57%;
+
+            }
+            @include breakpoint(desktop) {
+                width: 56%;
+            }
+        }
+
+        &__image3 { 
+            @include breakpoint(tablet) {
+                display: flex;
+                flex-direction: column;
+                width: 41%;
+                order: 3;
+                gap: 0.7rem;
+            }
+            @include breakpoint(desktop) {
+                width: 40%;
+                gap: 30px;
+            }
+            img {
+                @include breakpoint(tablet) {
+                    height: 313px;
+                }
+            }
+            .be-inspired {
+                background-color: $black;
+                color: $white;
+                padding: 3rem 2rem;
+                margin: 1rem auto 6.5rem;
+                width: 100%;
+                @include breakpoint(tablet) {
+                    order: 4;
+                    display: block;
+                    padding: 85px 2.5rem;
+                    margin: 0;
+                }
+                @include breakpoint(desktop) {
+                    padding: 4rem 3rem;
+                }
+                
+                h2 {
+                    margin-bottom: 25px;
+                    font-size: 50px;
+                    font-weight: 900;
+                    line-height: 45px;
+                    text-transform: uppercase;
+                    font-family: $title-font;
+                    @include breakpoint(desktop) {
+                        margin-bottom: 2rem;
+                        font-size: 3.75rem;
+                        font-weight: 900;
+                        line-height: 3.75rem;
+                    }
+                }
+            
+                p {
+                    font-size: 18px;
+                    line-height: 1.5rem;
+
+                    @include breakpoint(desktop) {
+                        font-size: 22px;
+                        line-height: 2.3rem;                        
+                    }
+                }
+            }
+        }
+    }
+}
